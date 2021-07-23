@@ -45,7 +45,7 @@
         console.log("Received: " + JSON.stringify(received));
         // You will probably want to add some code here to draw more lines.
         if (received.uid != uid) {
-            path.add(new Point(received.x, received.y));
+            path.add(new Point(received[x], received[y]));
         }
     }
 
