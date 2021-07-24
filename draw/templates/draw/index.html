@@ -26,7 +26,9 @@
     var tool = new paper.Tool();
     var path = new paper.Path();
     var uid = Date.now() % 10000;
-    path.strokeColor = "red";
+    path.strokeColor = paper.Color.random();
+    const map = new Map();
+    map.set(uid, path.strokeColor);
 
     // getting the URL (you may want to use for Exercise 3)
     var url = window.location.href;
@@ -47,6 +49,7 @@
         if (received.uid != uid) {
             var point = new paper.Point(received.x, received.y)
             path.add(point);
+            path.strokeColor = map.get(received.uid);
         }
     }
 
