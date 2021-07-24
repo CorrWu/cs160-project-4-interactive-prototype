@@ -48,8 +48,8 @@
         // You will probably want to add some code here to draw more lines.
         if (received.uid != uid) {
             var point = new paper.Point(received.x, received.y)
-            path.add(point);
             path.strokeColor = map.get(received.uid);
+            path.add(point);
         }
     }
 
