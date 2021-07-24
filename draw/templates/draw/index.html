@@ -48,8 +48,8 @@
         // You will probably want to add some code here to draw more lines.
         var point = new paper.Point(received.x, received.y)
         var new_path = new paper.Path();
-        new_path.add(point);
         new_path.strokeColor = map.get(received.uid);
+        new_path.add(point);
     }
 
     socket.onclose = function(e) {
