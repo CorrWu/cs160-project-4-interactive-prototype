@@ -47,14 +47,14 @@
         console.log("Received: " + JSON.stringify(received));
         // You will probably want to add some code here to draw more lines.
         var point = new paper.Point(received.x, received.y);
-        let path = msg?.content?.split(' ');
-        path.splitAt(point);
+        //let path = msg?.content?.split(' ');
+        var new_path = path.splitAt(point);
 
         if (uid != received.uid) {
             //path.splitAt(point);
             //var path = new paper.Path();
-            path.strokeColor = map.get(received.uid);
-            path.add(point);
+            new_path.strokeColor = map.get(received.uid);
+            new_path.add(point);
         //path.strokeColor = map.get(received.uid);
         //path.add(point);
         }
