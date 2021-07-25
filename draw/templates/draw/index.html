@@ -41,7 +41,7 @@
     tool.onMouseMove = function(event) { //http://paperjs.org/reference/tool/ path examples
        path.add(event.point);
        // You may need to add code here if you want to pass any other information.
-       socket.send("{\"x\" : " + event.point.x + ", \"y\" : " + event.point.y + ", \"uid\" : " + uid + ", \"color_map\" : " + color_map + ", \"path_map\" : " + path_map + "}" );
+       socket.send("{\"x\" : " + event.point.x + ", \"y\" : " + event.point.y + ", \"uid\" : " + uid + ", \"color_map\" : " + color_map + "}" );
     }
 
     socket.onmessage = function(receivedMessage) {
@@ -56,7 +56,12 @@
             //new_path.strokeColor = map.get(received.uid);
             //new_path.add(point);
             var point = new paper.Point(received.x, received.y);
-            var new_path = received.path_map.get(received.uid);
+            if (!path_map.has(received.uid)) {
+                var new_path = new paper.Path();
+                new_path.strokeColor = color_map.get(received.uid);
+                path_map.set(received.uid, new_path);
+            }
+            path_map.get(received.uid).add(point);
         //path.strokeColor = map.get(received.uid);
         //path.add(point);
         }
