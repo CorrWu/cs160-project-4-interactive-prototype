@@ -48,13 +48,7 @@
         var received = JSON.parse(receivedMessage.data);
         console.log("Received: " + JSON.stringify(received));
         // You will probably want to add some code here to draw more lines.
-        //let path = msg?.content?.split(' ');
-        //var new_path = path.splitAt(point);
         if (uid != received.uid) {
-            //path.splitAt(point);
-            //var path = new paper.Path();
-            //new_path.strokeColor = map.get(received.uid);
-            //new_path.add(point);
             var point = new paper.Point(received.x, received.y);
             if (!color_map.has(received.uid)) {
                 color_map.set(received.uid, new paper.Color(received.red, received.green, received.blue));
@@ -65,8 +59,6 @@
                 path_map.set(received.uid, new_path);
             }
             path_map.get(received.uid).add(point);
-        //path.strokeColor = map.get(received.uid);
-        //path.add(point);
         }
     }
 
