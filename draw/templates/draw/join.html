@@ -1,0 +1,96 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Join Room Page</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'draw/vendor/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Salsa:400">
+    <script type="text/javascript" src="{% static 'draw/vendor/jquery/jquery-3.3.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'draw/vendor/paper/paper-full.min.js' %}"></script>
+
+    <style type="text/css">
+    /* Join room (display) */
+    #join_background {
+        position: relative;
+        width: 1024px;
+        height: 768px;
+
+        background: #A35FC2;
+    }
+
+    /* Enter the code to join! */
+    #title_text {
+        position: absolute;
+        width: 775px;
+        height: 423px;
+        left: 125px;
+        top: 20px;
+
+        font-family: Salsa;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 100px;
+        line-height: 123px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: #FFFFFF;
+    }
+
+    #code_rec {
+        position: absolute;
+        width: 214px;
+        height: 82px;
+        left: 596px;
+        top: 486px;
+
+        background: #FFFFFF;
+        border-radius: 25px;
+
+        font-family: Salsa;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 60px;
+        line-height: 74px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        color: #A35FC2;
+    }
+
+    #code_text {
+        position: absolute;
+        width: 611px;
+        height: 119px;
+        left: 223px;
+        top: 467px;
+
+        font-family: Salsa;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 60px;
+        line-height: 74px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        color: #FFFFFF;
+    }
+
+    </style>
+
+</head>
+<body id="join_background">
+    <div id="title_text"> Enter the code to join! </div>
+    <div id="code_rec"> 160160 </div>
+    <div id="code_text"> Room code: </div>
+</body>
+<script>
+
+</script>
+</html>
