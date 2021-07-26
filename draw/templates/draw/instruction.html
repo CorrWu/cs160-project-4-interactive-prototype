@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Join Room Page</title>
+    <title>Instruction Page</title>
 
     <link rel="stylesheet" type="text/css" href="{% static 'draw/vendor/bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Salsa:400">
@@ -12,12 +12,86 @@
     <script type="text/javascript" src="{% static 'draw/vendor/paper/paper-full.min.js' %}"></script>
 
     <style type="text/css">
+    /* Instructions (display) */
+    #instruction_background {
+        position: relative;
+        width: 1024px;
+        height: 768px;
+
+        background: #B1CFF1;
+    }
+
+    /* create_room_button */
+    #title_comp {
+        position: absolute;
+        width: 334px;
+        height: 101px;
+        left: 345px;
+        top: 45px;
+    }
+
+
+    /* Rectangle 1 */
+    #title_rec {
+        position: absolute;
+        left: 0%;
+        right: 0.6%;
+        top: 0%;
+        bottom: 0%;
+
+        background: #FFFFFF;
+        border-radius: 25px;
+    }
+
+    /* Create a room */
+    #title_text {
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        top: 0%;
+        bottom: 0%;
+
+        font-family: Salsa;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 48px;
+        line-height: 59px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: #4863AA;
+    }
+
+    /* Each team will be given a word to draw. 1 team will be given a different word and they are the drawing mafias. For each round, each team will take turns to draw for 15 seconds and then vote out a team (Only the team with the most votes will be voted out). The mafias win if they are part of the 2 remaining teams in the game. */
+    #title_text {
+        position: absolute;
+        width: 893px;
+        height: 502px;
+        left: 65px;
+        top: 177px;
+
+        font-family: Salsa;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 35px;
+        line-height: 43px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+
+        color: #4863AA;
+    }
 
     </style>
 
 </head>
-<body>
-
+<body id="instruction_background">
+    <div id="title_comp">
+        <div id="title_text"> Instructions </div>
+        <div id="title_rec"></div>
+    </div>
 </body>
 <script>
 
