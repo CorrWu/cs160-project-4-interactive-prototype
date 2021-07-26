@@ -19,6 +19,9 @@ def home(request):
 def home_phone(request):
     return render(request, 'draw/home_phone.html')
 
+def instruction(request):
+    return render(request, 'draw/instruction.html')
+
 def instructions_phone(request):
     return render(request, 'draw/instructions_phone.html')
 

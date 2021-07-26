@@ -9,6 +9,7 @@ urlpatterns = [
     path('join/', views.join, name='join'),
     path('start/', views.start, name='start'),
     path('home_phone/', views.home_phone, name='home_phone'),
+    path('instruction/', views.instruction, name='instruction'),
     path('instructions_phone/', views.instructions_phone, name='instructions_phone'),
     path('instructions_phone_slide/', views.instructions_phone_slide, name='instructions_phone_slide'),
     path('start_phone/', views.start_phone, name='start_phone'),
