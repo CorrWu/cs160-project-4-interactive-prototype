@@ -1,0 +1,152 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Home Page</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'draw/vendor/bootstrap/css/bootstrap.min.css' %}">
+    <script type="text/javascript" src="{% static 'draw/vendor/jquery/jquery-3.3.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'draw/vendor/paper/paper-full.min.js' %}"></script>
+
+    <style type="text/css">
+    /* Home page (display) */
+    #home_page {
+        position: relative;
+        width: 1024px;
+        height: 768px;
+
+        background: #FFC361;
+    }
+
+
+    /* create_room_button */
+    #create_room_button_comp {
+        position: absolute;
+        width: 334px;
+        height: 91px;
+        left: 344px;
+        top: 490px;
+
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+
+    /* Rectangle 1 */
+    #create_room_button_rec {
+        position: absolute;
+        left: 0%;
+        right: 0.6%;
+        top: 0%;
+        bottom: 0%;
+
+        background: #B1CFF1;
+        border-radius: 25px;
+    }
+
+    /* Create a room */
+    #create_a_room_text {
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        top: 0%;
+        bottom: 0%;
+
+        font-family: Salsa;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 48px;
+        line-height: 59px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: #FFFFFF;
+    }
+
+
+    /* join_room_button */
+    #join_room_button_comp {
+        position: absolute;
+        width: 334px;
+        height: 91px;
+        left: 345px;
+        top: 610px;
+
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+
+    /* Rectangle 1 */
+    #join_room_rec {
+        position: absolute;
+        left: 0%;
+        right: 0.6%;
+        top: 0%;
+        bottom: 0%;
+
+        background: #4863AA;
+        border-radius: 25px;
+    }
+
+    /* Create a room */
+    #join_room_text {
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        top: 0%;
+        bottom: 0%;
+
+        font-family: Salsa;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 48px;
+        line-height: 59px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: #FFFFFF;
+    }
+
+
+    /* Drawing Mafias */
+    #title {
+        position: absolute;
+        width: 694px;
+        height: 332px;
+        left: 176px;
+        top: -25px;
+
+        font-family: Salsa;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 96px;
+        line-height: 118px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: #FFFFFF;
+
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    </style>
+
+</head>
+<body id="home_page">
+    <div id="title">
+    Drawing Mafias
+    </div>
+    <div id="create_room_button_comp">
+        <div id="create_room_button_rec"></div>
+        <div id="create_a_room_text">Create a room</div>
+    </div>
+    <div id="join_room_button_comp">
+        <div id="join_room_rec"><div>
+        <div id="join_room_text">Join a room</div>
+    </div>
+</body>
+<script>
+
+</script>
+</html>
