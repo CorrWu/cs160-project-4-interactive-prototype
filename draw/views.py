@@ -9,3 +9,6 @@ def home(request):
 
 def join(request):
     return render(request, 'draw/join.html')
+
+def start(request):
+    return render(request, 'draw/start.html')
