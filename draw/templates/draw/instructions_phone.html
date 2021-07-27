@@ -14,53 +14,6 @@
     <script type="text/javascript" src="{% static 'draw/vendor/paper/paper-full.min.js' %}"></script>
 
     <style type="text/css">
-    /* join_room_button */
-    #start_comp {
-        position: absolute;
-        width: 268px;
-        height: 78px;
-        left: 54px;
-        top: 640px;
-        width: 75vw; 
-        margin-left: 13vw; 
-        margin-top: 3vh; 
-        border-radius: 50px;
-
-        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-        border-radius: 25px;
-    }
-
-        /* Rectangle 1 */
-    #start_rec {
-        position: absolute;
-        left: 0%;
-        right: 0.6%;
-        top: 0%;
-        bottom: 0%;
-
-        background: #4863AA;
-        border-radius: 25px;
-    }
-
-        /* Create a room */
-    #start_text {
-        position: absolute;
-        left: 0%;
-        right: 0%;
-        top: 0%;
-        bottom: 0%;
-
-        font-family: Salsa;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 10vw;
-        line-height: 11vw;
-        display: flex;
-        align-items: center;
-        text-align: center;
-
-        color: #FFFFFF;
-    }
 
     </style>
 
@@ -69,11 +22,8 @@
     <button type="button" class="pl-5 pr-5 pt-3 pb-3 btn" style="width: 75vw; margin-left: 13vw; margin-top: 3vh; border-radius: 50px; color: #4863AA; background-color:white; font-size: 10vw;">How to play</button>
     <p style="text-align: center; font-size: 50px; margin: 15vh 10vw 0vh 10vw;">Each team will be given a word to draw. One of the teams will be given a different word and they are the drawing mafias. </p>
     <p style="text-align: center; font-size: 50px; margin: 5vh 10vw 0vh 10vw;">For each round, each team will take turns to draw for 15 seconds and then vote out a team (Only the team with the most votes will be voted out). The mafias win if they are part of the 2 remaining teams in the game.</p>
-    <div id="start_comp">
-        <div id="start_rec">
-            <a id="start_text" class="button" href="/draw/word_phone"> Start game </a>
-        </div>
-    </div>
+    <a href="/draw/start_phone" type="button" class="pl-5 pr-5 pt-3 pb-3 btn" style="width: 75vw; margin-left: 13vw; margin-top: 3vh; border-radius: 50px; color: #4863AA; background-color:white; font-size: 10vw;">Ready to start</a>
+
 
 </body>
 <script>
