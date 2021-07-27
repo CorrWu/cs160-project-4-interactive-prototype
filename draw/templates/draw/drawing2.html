@@ -122,6 +122,18 @@
     <div id="t3"> Team 3 </div>
 </body>
 <script>
+    var seconds = 20;
+    
+    function countdown() {
+        seconds = seconds - 1;
+        if (seconds < 0) {
+            window.location.href = "../next_team_t3";
+        } else {
+            window.setTimeout("countdown()", 1000);
+        }
+    }
+
+    countdown();
 
 </script>
 </html>

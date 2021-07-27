@@ -175,6 +175,10 @@ function formatTime(time) {
     seconds = `0${seconds}`;
   }
 
+  if (seconds == 0) {
+    window.location.href = "../score";
+  }
+
   return `${minutes}:${seconds}`;
 }
 

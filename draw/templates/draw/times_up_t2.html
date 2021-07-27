@@ -17,11 +17,24 @@
     </style>
 
 </head>
-<body style="font-family: 'Salsa', cursive; color:#24A27C;">
-    <button type="button" class="pl-5 pr-5 pt-3 pb-3 btn" style="width: 75vw; margin-left: 13vw; margin-top: 3vh; border-radius: 50px; color: white; background-color:#24A27C; font-size: 10vw;">Team 1</button>
+<body style="font-family: 'Salsa', cursive; color:#FFC361;">
+    <button type="button" class="pl-5 pr-5 pt-3 pb-3 btn" style="width: 75vw; margin-left: 13vw; margin-top: 3vh; border-radius: 50px; color: white; background-color:#FFC361; font-size: 10vw;">Team 2</button>
     <p style="font-size: 130px; padding: 35vh 5vw 5vh 5vw; text-align: center;">Time's up!</p>
 </body>
 <script>
+    var seconds = 5;
+    
+    function countdown() {
+        seconds = seconds - 1;
+        if (seconds < 0) {
+            window.location.href = "../t3_t2";
+        } else {
+            window.setTimeout("countdown()", 1000);
+        }
+    }
+
+    countdown();
+
 
 </script>
 </html>
