@@ -1,0 +1,122 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Drawing Team 1 Page</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'draw/vendor/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Salsa:400">
+    <script type="text/javascript" src="{% static 'draw/vendor/jquery/jquery-3.3.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'draw/vendor/paper/paper-full.min.js' %}"></script>
+
+    <style type="text/css">
+        /* Drawing page (display) */
+    #drawing_bg {
+        position: relative;
+        width: 1024px;
+        height: 768px;
+
+        background: #FFFFFF;
+    }
+
+        /* Team 2 */
+    #t2 {
+        position: absolute;
+        left: 32.62%;
+        right: 34.77%;
+        top: 2.73%;
+        bottom: 85.42%;
+
+        font-family: Salsa;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 48px;
+        line-height: 59px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: #FFC361;
+    }
+
+
+        /* Team 3 */
+    #t3 {
+        position: absolute;
+        left: 65.23%;
+        right: 2.15%;
+        top: 2.73%;
+        bottom: 85.42%;
+
+        font-family: Salsa;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 48px;
+        line-height: 59px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: #24A27C;
+    }
+
+
+    #t1_comp {
+        position: absolute;
+        width: 303px;
+        height: 91px;
+        left: 21px;
+        top: 25px;
+    }
+
+
+        /* Rectangle 1 */
+    #t1_rec {
+        position: absolute;
+        left: 0%;
+        right: 0.6%;
+        top: 0%;
+        bottom: 0%;
+
+        background: #B1CFF1;
+        border-radius: 25px;
+    }
+
+        /* Create a room */
+    #t1_text {
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        top: 0%;
+        bottom: 0%;
+
+        font-family: Salsa;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 48px;
+        line-height: 59px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: #FFFFFF;
+    }
+
+    </style>
+
+</head>
+<body id="drawing_bg">
+    <div id="t1_comp">
+        <div id="t1_rec">
+            <div id="t1_text"> Team 1 </div>
+        </div>
+    </div>
+    <div id="t2"> Team 2 </div>
+    <div id="t3"> Team 3 </div>
+</body>
+<script>
+
+</script>
+</html>
