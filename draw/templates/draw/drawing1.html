@@ -122,7 +122,7 @@
     </div>
     <div id="t2"> Team 2 </div>
     <div id="t3"> Team 3 </div>
-    <canvas id="myCanvas" width="950px" height="600px" style="margin-left: 30px; margin-right: 0px; margin-top:150px"></canvas>
+    <canvas id="myCanvas" width="450px" height="750px" style="margin-left: 30px; margin-right: 0px; margin-top:150px"></canvas>
 </body>
 <script>
 // websocket
@@ -157,7 +157,7 @@
         console.log("Received: " + JSON.stringify(received));
         // You will probably want to add some code here to draw more lines.
             if (uid != received.uid) {
-            var point = new paper.Point(received.x, received.y);
+            var point = new paper.Point(received.x/2, received.y/2);
             if (!color_map.has(received.uid)) {
                 color_map.set(received.uid, new paper.Color(received.red, received.green, received.blue));
             }
