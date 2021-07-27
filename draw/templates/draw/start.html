@@ -131,11 +131,11 @@
         'ws://' + window.location.host + '/ws/draw');
     
     $("#start_text").click(function(){
-        socket.send("start");
+        socket.send("{\"start\" : " + 1 + "}");
         console.log("sent start");
     })
 
-    
+
     
 </script>
 </html>
