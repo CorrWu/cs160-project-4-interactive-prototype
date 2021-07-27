@@ -13,8 +13,8 @@ def join(request):
 def start(request):
     return render(request, 'draw/start.html')
 
-def home(request):
-    return render(request, 'draw/home.html')
+def create1(request):
+    return render(request, 'draw/create1.html')
 
 def home_phone(request):
     return render(request, 'draw/home_phone.html')
