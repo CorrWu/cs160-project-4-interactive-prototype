@@ -25,6 +25,12 @@ def drawing1(request):
 def next_team(request):
     return render(request, 'draw/next_team.html')
 
+def last_team(request):
+    return render(request, 'draw/last_team.html')
+
+def score(request):
+    return render(request, 'draw/score.html')
+
 def home_phone(request):
     return render(request, 'draw/home_phone.html')
 
