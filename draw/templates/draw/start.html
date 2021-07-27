@@ -125,6 +125,14 @@
     </div>
 </body>
 <script>
+    var url = window.location.href;
 
+    var socket = new WebSocket(
+        'ws://' + window.location.host + '/ws/draw');
+    
+    $("#start_comp").click(function(){
+        socket.send("start");
+    })
+    
 </script>
 </html>
