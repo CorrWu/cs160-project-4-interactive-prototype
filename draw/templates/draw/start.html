@@ -130,9 +130,12 @@
     var socket = new WebSocket(
         'ws://' + window.location.host + '/ws/draw');
     
-    $("#start_comp").click(function(){
+    $("#start_text").click(function(){
         socket.send("start");
+        console.log("sent start");
     })
+
+    
     
 </script>
 </html>
