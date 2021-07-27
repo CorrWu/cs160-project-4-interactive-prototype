@@ -43,4 +43,25 @@ def num_players_phone(request):
 def num_teams_phone(request):
     return render(request, 'draw/num_teams_phone.html')
 
+def word(request):
+    return render(request, 'draw/word.html')
+
+def word_phone(request):
+    return render(request, 'draw/word_phone.html')
+
+def drawing_phone(request):
+    return render(request, 'draw/drawing_phone.html')
+
+def next_team_phone(request):
+    return render(request, 'draw/next_team_phone.html')
+
+def guess(request):
+    return render(request, 'draw/guess.html')
+
+def guess_phone(request):
+    return render(request, 'draw/guess_phone.html')
+
+def score_phone(request):
+    return render(request, 'draw/score_phone.html')
+
 
