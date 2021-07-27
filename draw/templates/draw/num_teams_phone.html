@@ -21,6 +21,17 @@
     <p style="font-size: 10vw; padding: 35vh 5vw 5vh 5vw; text-align: center;">Waiting for host to set the number of teams...</p>
 </body>
 <script>
+    var url = window.location.href;
 
+    var socket = new WebSocket(
+        'ws://' + window.location.host + '/ws/draw');
+    
+    socket.onmessage = function(receivedMessage) {
+        var received = JSON.parse(receivedMessage.data);
+        if (received.create2 == 1) {  
+            console.log("received create2, proceed to next page");
+            location.href = "/draw/start_phone";
+        }
+    }
 </script>
 </html>

@@ -145,6 +145,14 @@
     </div>
 </body>
 <script>
+    var url = window.location.href;
 
+    var socket = new WebSocket(
+        'ws://' + window.location.host + '/ws/draw');
+    
+    $(".button").click(function(){
+        socket.send("{\"create2\" : " + 1 + "}");
+        console.log("sent create2");
+    })
 </script>
 </html>
