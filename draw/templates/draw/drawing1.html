@@ -157,7 +157,7 @@
         console.log("Received: " + JSON.stringify(received));
         // You will probably want to add some code here to draw more lines.
             if (uid != received.uid) {
-            var point = new paper.Point(received.x/2, received.y/2);
+            var point = new paper.Point(received.x/3, received.y/3);
             if (!color_map.has(received.uid)) {
                 color_map.set(received.uid, new paper.Color(received.red, received.green, received.blue));
             }
