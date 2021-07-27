@@ -22,6 +22,12 @@ def create2(request):
 def drawing1(request):
     return render(request, 'draw/drawing1.html')
 
+def drawing2(request):
+    return render(request, 'draw/drawing2.html')
+
+def drawing3(request):
+    return render(request, 'draw/drawing3.html')
+
 def next_team(request):
     return render(request, 'draw/next_team.html')
 
