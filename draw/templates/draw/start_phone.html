@@ -29,8 +29,12 @@
 
     
     socket.onmessage = function(receivedMessage) {
-        if (receivedMessage == "start") {  
-                location.href = "/draw/word_phone";
+        var received = JSON.parse(receivedMessage.data);
+        if (received.start == 1) {  
+            console.log("received start");
+            location.href = "/draw/word_phone";
+        } else {
+            console.log("Received: " + JSON.stringify(received));
         }
     }
 </script>
