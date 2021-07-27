@@ -16,4 +16,11 @@ urlpatterns = [
     path('join_phone/', views.join_phone, name='join_phone'),
     path('num_players_phone/', views.num_players_phone, name='num_players_phone'),
     path('num_teams_phone/', views.num_teams_phone, name='num_teams_phone'),
+    path('word/', views.word, name='word'),
+    path('word_phone/', views.word_phone, name='word_phone'),
+    path('drawing_phone/', views.drawing_phone, name='drawing_phone'),
+    path('next_team_phone/', views.next_team_phone, name='next_team_phone'),
+    path('guess/', views.guess, name='guess'),
+    path('guess_phone/', views.guess_phone, name='guess_phone'),
+    path('score_phone/', views.score_phone, name='score_phone'),
 ]
