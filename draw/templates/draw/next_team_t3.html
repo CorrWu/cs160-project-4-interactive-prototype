@@ -47,7 +47,7 @@
 
 </head>
 <body id="next_bg">
-    <div id="next_text"> Get ready to vote! </div>
+    <div id="next_text"> Next Team! <span style="font-size:72px"> (Team 3) </span> </div>
 </body>
 <script>
     var seconds = 5;
@@ -55,7 +55,7 @@
     function countdown() {
         seconds = seconds - 1;
         if (seconds < 0) {
-            window.location.href = "../guess";
+            window.location.href = "../drawing3";
         } else {
             window.setTimeout("countdown()", 1000);
         }

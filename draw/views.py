@@ -31,14 +31,56 @@ def drawing3(request):
 def next_team(request):
     return render(request, 'draw/next_team.html')
 
-def next_team_t1_phone(request):
-    return render(request, 'draw/next_team_t1_phone.html')
+def next_team_t2(request):
+    return render(request, 'draw/next_team_t2.html')
 
-def next_team_t2_phone(request):
-    return render(request, 'draw/next_team_t2_phone.html')
+def next_team_t3(request):
+    return render(request, 'draw/next_team_t3.html')
 
-def next_team_t3_phone(request):
-    return render(request, 'draw/next_team_t3_phone.html')
+def times_up_t1(request):
+    return render(request, 'draw/times_up_t1.html')
+
+def times_up_t2(request):
+    return render(request, 'draw/times_up_t2.html')
+
+def times_up_t3(request):
+    return render(request, 'draw/times_up_t3.html')
+
+def t1_t2(request):
+    return render(request, 'draw/t1_t2.html')
+
+def t1_t3(request):
+    return render(request, 'draw/t1_t3.html')
+
+def t2_t1(request):
+    return render(request, 'draw/t2_t1.html')
+
+def t2_t3(request):
+    return render(request, 'draw/t2_t3.html')
+
+def t3_t1(request):
+    return render(request, 'draw/t3_t1.html')
+
+def t3_t2(request):
+    return render(request, 'draw/t3_t2.html')
+
+def t2_turn(request):
+    return render(request, 'draw/t2_turn.html')
+
+def t3_turn(request):
+    return render(request, 'draw/t3_turn.html')
+
+def next_t3_t1(request):
+    return render(request, 'draw/next_t3_t1.html')
+
+def next_t2_t3(request):
+    return render(request, 'draw/next_t2_t3.html')
+
+def t1_vote(request):
+    return render(request, 'draw/t1_vote.html')
+
+def t2_vote(request):
+    return render(request, 'draw/t2_vote.html')
 
 def last_team(request):
     return render(request, 'draw/last_team.html')
@@ -94,8 +136,14 @@ def drawing_t3_phone(request):
 def guess(request):
     return render(request, 'draw/guess.html')
 
-def guess_phone(request):
-    return render(request, 'draw/guess_phone.html')
+def t1_guess(request):
+    return render(request, 'draw/t1_guess.html')
+
+def t2_guess(request):
+    return render(request, 'draw/t2_guess.html')
+
+def t3_guess(request):
+    return render(request, 'draw/t3_guess.html')
 
 def score_phone(request):
     return render(request, 'draw/score_phone.html')

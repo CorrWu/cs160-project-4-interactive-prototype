@@ -117,5 +117,18 @@
 </body>
 <script>
 
+var seconds = 20;
+    
+    function countdown() {
+        seconds = seconds - 1;
+        if (seconds < 0) {
+            window.location.href = "../last_team";
+        } else {
+            window.setTimeout("countdown()", 1000);
+        }
+    }
+
+    countdown();
+
 </script>
 </html>

@@ -177,5 +177,18 @@
         console.error('Chat socket closed unexpectedly');
     };
 
+    var seconds = 20;
+    
+    function countdown() {
+        seconds = seconds - 1;
+        if (seconds < 0) {
+            window.location.href = "../next_team_t2";
+        } else {
+            window.setTimeout("countdown()", 1000);
+        }
+    }
+
+    countdown();
+
 </script>
 </html>
