@@ -16,6 +16,9 @@ def start(request):
 def create1(request):
     return render(request, 'draw/create1.html')
 
+def create2(request):
+    return render(request, 'draw/create2.html')
+
 def home_phone(request):
     return render(request, 'draw/home_phone.html')
 

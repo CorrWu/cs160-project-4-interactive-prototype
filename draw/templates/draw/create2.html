@@ -1,0 +1,150 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Create Room Step 1 Page</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'draw/vendor/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Salsa:400">
+    <script type="text/javascript" src="{% static 'draw/vendor/jquery/jquery-3.3.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'draw/vendor/paper/paper-full.min.js' %}"></script>
+
+    <style type="text/css">
+        /* Create room step 1 (display) */
+    #create2_bg {
+        position: relative;
+        width: 1024px;
+        height: 768px;
+
+        background: #FFC361;
+    }
+
+        /* Choose the number of players per team! */
+    #create_text {
+        position: absolute;
+        width: 775px;
+        height: 423px;
+        left: 124px;
+        top: 109px;
+
+        font-family: Salsa;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 72px;
+        line-height: 88px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+        color: #FFFFFF;
+    }
+
+    .rec {
+        position: absolute;
+        left: 0%;
+        right: 0.6%;
+        top: 0%;
+        bottom: 0%;
+
+        background: #B1CFF1;
+        border-radius: 25px;
+    }
+
+    .text {
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        top: 0%;
+        bottom: 0%;
+
+        font-family: Salsa;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 50px;
+        line-height: 61px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+
+        color: #FFFFFF;
+        border-radius: 25px;
+    }
+
+        /* join_room_button */
+    #comp3 {
+        position: absolute;
+        width: 145px;
+        height: 134px;
+        left: 723px;
+        top: 532px;
+
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+
+        /* join_room_button */
+    #comp4 {
+        position: absolute;
+        width: 145px;
+        height: 134px;
+        left: 534px;
+        top: 532px;
+
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+
+        /* join_room_button */
+    #comp5 {
+        position: absolute;
+        width: 145px;
+        height: 134px;
+        left: 345px;
+        top: 532px;
+
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+
+        /* join_room_button */
+    #comp6 {
+        position: absolute;
+        width: 145px;
+        height: 134px;
+        left: 156px;
+        top: 532px;
+
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+
+
+    </style>
+
+</head>
+<body id="create2_bg">
+    <div id="create_text"> Choose the number of teams! </div>
+    <div id="comp3">
+        <div class="rec">
+            <div class="text"> 3 </div>
+        </div>
+    </div>
+    <div id="comp4">
+        <div class="rec">
+            <div class="text"> 4 </div>
+        </div>
+    </div>
+    <div id="comp5">
+        <div class="rec">
+            <div class="text"> 5 </div>
+        </div>
+    </div>
+    <div id="comp6">
+        <div class="rec">
+            <div class="text"> 6 </div>
+        </div>
+    </div>
+</body>
+<script>
+
+</script>
+</html>
