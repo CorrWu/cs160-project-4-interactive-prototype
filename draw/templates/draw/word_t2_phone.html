@@ -23,10 +23,9 @@ body {
 
 .base-timer {
   position: relative;
-  width: 150px;
-  height: 150px;
-  left: 280px;
-  margin-top: 50px;
+  width: 700px;
+  height: 700px;
+  margin-top: 500px;
 }
 
 .base-timer__svg {
@@ -39,12 +38,12 @@ body {
 }
 
 .base-timer__path-elapsed {
-  stroke-width: 9px;
+  stroke-width: 10px;
   stroke: grey;
 }
 
 .base-timer__path-remaining {
-  stroke-width: 9px;
+  stroke-width: 10px;
   stroke-linecap: round;
   transform: rotate(90deg);
   transform-origin: center;
@@ -66,19 +65,26 @@ body {
 }
 
 .base-timer__label {
+  font-size: 0px;
+}
+
+.word {
   position: absolute;
-  top: 40px;
-  left: 30px;
+  left: 100px;
+  width: 500px;
+  height: 500px;
+  top: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 48px;
+  text-align: center;
+  font-size: 100px;
 }
     </style>
 
 </head>
 <body style="font-family: 'Salsa', cursive; color:black;">
-    <button type="button" class="mx-auto pt-3 pb-3 btn" style="width: 75vw; margin-left: 13vw; margin-top: 3vh; border-radius: 50px; color: white; background-color:#B1CFF1; font-size: 10vw;">Team 1</button>
+    <button type="button" class="mx-auto pt-3 pb-3 btn" style="width: 75vw; margin-left: 13vw; margin-top: 3vh; border-radius: 50px; color: white; background-color:#FFC361; font-size: 10vw;">Team 2</button>
     <div id="app"></div>
 </body>
 <script>
@@ -127,9 +133,8 @@ document.getElementById("app").innerHTML = `
       ></path>
     </g>
   </svg>
-  <span id="base-timer-label" class="base-timer__label">${formatTime(
-    timeLeft
-  )}</span>
+  <span id="base-timer-label" class="base-timer__label"></span>
+  <span class="word"> Your word is: Panda<span>
 </div>
 `;
 
@@ -161,6 +166,10 @@ function formatTime(time) {
 
   if (seconds < 10) {
     seconds = `0${seconds}`;
+  }
+
+  if (seconds == 0) {
+    window.location.href = "../drawing_t1_phone";
   }
 
   return `${minutes}:${seconds}`;
