@@ -122,7 +122,7 @@
     </div>
     <div id="t2"> Team 2 </div>
     <div id="t3"> Team 3 </div>
-    <canvas id="myCanvas" width="300px" height="500px" style="margin-left: 300px; margin-right: 0px; margin-top:150px;"></canvas>
+    <canvas id="myCanvas" width="300px" height="500px" style="margin-left: 320px; margin-right: 0px; margin-top:150px;"></canvas>
 </body>
 <script>
 // websocket
@@ -134,7 +134,7 @@
     var path = new paper.Path();
     var uid = Date.now() % 10000;
     path.strokeColor = '#B1CFF1';
-    path.strokeWidth = 10;
+    path.strokeWidth = 3;
     const color_map = new Map();
     color_map.set(uid, path.strokeColor);
     const path_map = new Map();
