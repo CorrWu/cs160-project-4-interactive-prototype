@@ -31,6 +31,15 @@ def drawing3(request):
 def next_team(request):
     return render(request, 'draw/next_team.html')
 
+def next_team_t1_phone(request):
+    return render(request, 'draw/next_team_t1_phone.html')
+
+def next_team_t2_phone(request):
+    return render(request, 'draw/next_team_t2_phone.html')
+
+def next_team_t3_phone(request):
+    return render(request, 'draw/next_team_t3_phone.html')
+
 def last_team(request):
     return render(request, 'draw/last_team.html')
 
@@ -64,14 +73,23 @@ def num_teams_phone(request):
 def word(request):
     return render(request, 'draw/word.html')
 
-def word_phone(request):
-    return render(request, 'draw/word_phone.html')
+def word_t1_phone(request):
+    return render(request, 'draw/word_t1_phone.html')
 
-def drawing_phone(request):
-    return render(request, 'draw/drawing_phone.html')
+def word_t2_phone(request):
+    return render(request, 'draw/word_t2_phone.html')
 
-def next_team_phone(request):
-    return render(request, 'draw/next_team_phone.html')
+def word_t3_phone(request):
+    return render(request, 'draw/word_t3_phone.html')
+
+def drawing_t1_phone(request):
+    return render(request, 'draw/drawing_t1_phone.html')
+
+def drawing_t2_phone(request):
+    return render(request, 'draw/drawing_t2_phone.html')
+
+def drawing_t3_phone(request):
+    return render(request, 'draw/drawing_t3_phone.html')
 
 def guess(request):
     return render(request, 'draw/guess.html')
@@ -81,5 +99,4 @@ def guess_phone(request):
 
 def score_phone(request):
     return render(request, 'draw/score_phone.html')
-
 
