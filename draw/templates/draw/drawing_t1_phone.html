@@ -107,7 +107,7 @@ body {
     var url = window.location.href;
 
     var socket = new WebSocket(
-        'ws://' + window.location.host + '/ws/draw');
+        'ws://' + window.location.host + '/ws/draw/');
 
     tool.onMouseMove = function(event) { //http://paperjs.org/reference/tool/ path examples
        path.add(event.point);
