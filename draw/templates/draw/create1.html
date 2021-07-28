@@ -164,7 +164,7 @@
     var url = window.location.href;
 
     var socket = new WebSocket(
-        'ws://' + window.location.host + '/ws/draw');
+        'wss://' + window.location.host + '/ws/draw');
     
     $(".button").click(function(){
         socket.send("{\"create1\" : " + 1 + "}");

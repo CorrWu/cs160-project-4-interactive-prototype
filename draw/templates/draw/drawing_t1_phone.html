@@ -107,7 +107,7 @@ body {
     var url = window.location.href;
 
     var socket = new WebSocket(
-        'ws://' + window.location.host + '/ws/draw/');
+        'wss://' + window.location.host + '/ws/draw');
 
     tool.onMouseMove = function(event) { //http://paperjs.org/reference/tool/ path examples
        path.add(event.point);
@@ -119,6 +119,7 @@ body {
         var received = JSON.parse(receivedMessage.data);
         console.log("Received: " + JSON.stringify(received));
         // You will probably want to add some code here to draw more lines.
+        if (url == 'http://127.0.0.1:8000/draw/drawing.html') {
             if (uid != received.uid) {
             var point = new paper.Point(received.x, received.y);
             if (!color_map.has(received.uid)) {
@@ -133,11 +134,13 @@ body {
             path_map.get(received.uid).add(point);
             }
         }
+    }
 
 
     socket.onclose = function(e) {
         console.error('Chat socket closed unexpectedly');
     };
+
 
     
 
@@ -167,6 +170,7 @@ if (version == "version1") {
 if (version == "version2") {
   var TIME_LIMIT = 10;
 }
+
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;

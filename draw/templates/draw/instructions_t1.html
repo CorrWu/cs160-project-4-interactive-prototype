@@ -22,7 +22,7 @@
     <button type="button" class="pl-5 pr-5 pt-3 pb-3 btn" style="width: 75vw; margin-left: 13vw; margin-top: 3vh; border-radius: 50px; color: #4863AA; background-color:white; font-size: 10vw;">How to play</button>
     <p style="text-align: center; font-size: 50px; margin: 15vh 10vw 0vh 10vw;">Each team will be given a word to draw. One of the teams will be given a different word and they are the drawing mafias. </p>
     <p style="text-align: center; font-size: 50px; margin: 5vh 10vw 0vh 10vw;">For each round, each team will take turns to draw for 15 seconds and then vote out a team (Only the team with the most votes will be voted out). The mafias win if they are part of the 2 remaining teams in the game.</p>
-    <a href="/draw/start_phone" type="button" class="pl-5 pr-5 pt-3 pb-3 btn" style="width: 75vw; margin-left: 13vw; margin-top: 6vh; border-radius: 50px; color:white; background-color:#4863AA; font-size: 10vw;">Ready to start</a>
+    <a href="/draw/start_t1" type="button" class="pl-5 pr-5 pt-3 pb-3 btn" style="width: 75vw; margin-left: 13vw; margin-top: 6vh; border-radius: 50px; color:white; background-color:#4863AA; font-size: 10vw;">Ready to start</a>
 
 
 </body>
@@ -30,7 +30,7 @@
     var url = window.location.href;
 
     var socket = new WebSocket(
-        'ws://' + window.location.host + '/ws/draw');
+        'wss://' + window.location.host + '/ws/draw');
 
     
     socket.onmessage = function(receivedMessage) {
