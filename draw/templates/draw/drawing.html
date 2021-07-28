@@ -316,14 +316,15 @@
 
     var version = localStorage.getItem("version");
     if (version == "version1") {
+        var seconds = 70;
         countdown_v1();
     }
     if (version == "version2") {
+        var seconds = 40;
         countdown_v2();
     }
 
     // version 1: 20 seconds to draw
-    var seconds = 70;
     function countdown_v1() {
         seconds = seconds - 1;
         var canvas_t1 = document.getElementById("drawing_bg");
@@ -364,7 +365,6 @@
     }
 
     // version 2: 10 seconds to draw
-    var seconds = 40;
     function countdown_v2() {
         seconds = seconds - 1;
         var canvas_t1 = document.getElementById("drawing_bg");
