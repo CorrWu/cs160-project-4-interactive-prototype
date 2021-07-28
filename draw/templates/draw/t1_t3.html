@@ -22,7 +22,14 @@
     <p style="font-size: 130px; padding: 35vh 5vw 5vh 5vw; text-align: center;">Team 1 is drawing...</p>
 </body>
 <script>
-    var seconds = 20;
+
+var version = localStorage.getItem("version");
+if (version == "version1") {
+  var seconds = 20;
+}
+if (version == "version2") {
+  var seconds = 10;
+}
     
     function countdown() {
         seconds = seconds - 1;

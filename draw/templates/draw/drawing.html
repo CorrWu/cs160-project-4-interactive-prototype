@@ -310,15 +310,21 @@
             }
         }
 
-
-
     socket.onclose = function(e) {
         console.error('Chat socket closed unexpectedly');
     };
 
+    var version = localStorage.getItem("version");
+    if (version == "version1") {
+        countdown_v1();
+    }
+    if (version == "version2") {
+        countdown_v2();
+    }
+
+    // version 1: 20 seconds to draw
     var seconds = 70;
-    
-    function countdown() {
+    function countdown_v1() {
         seconds = seconds - 1;
         var canvas_t1 = document.getElementById("drawing_bg");
         var next_team = document.getElementById("next_team");
@@ -353,11 +359,50 @@
         if (seconds < 0) {
             window.location.href = "../last_team";
         } else {
-            window.setTimeout("countdown()", 1000);
+            window.setTimeout("countdown_v1()", 1000);
         }
     }
 
-    countdown();
+    // version 2: 10 seconds to draw
+    var seconds = 40;
+    function countdown_v2() {
+        seconds = seconds - 1;
+        var canvas_t1 = document.getElementById("drawing_bg");
+        var next_team = document.getElementById("next_team");
+        var t1_comp = document.getElementById("t1_comp");
+        var t2_comp = document.getElementById("t2_comp");
+        var t3_comp = document.getElementById("t3_comp");
+        var t1 = document.getElementById("t1");
+        var team = document.getElementById("team");
+        // 20 seconds: team 1 drawing
+        if (seconds == 30) {
+            next_team.style.display = "block";
+            t2_comp.style.display = "block";
+            t1.style.display = "flex";
+            t1_comp.style.display = "none";
+        }
+        // 5 seconds: next team transition
+        if (seconds == 25) {
+            next_team.style.display = "none";
+        }
+        // 20 seconds: team 2 drawing
+        if (seconds == 15) {
+            team.innerHTML = "(Team 3)";
+            next_team.style.display = "block";
+            t2_comp.style.display = "none";
+            t3_comp.style.display = "block";
+            t1.style.display = "flex";
+        }
+        // 5 seconds: next team transition
+        if (seconds == 10) {
+            next_team.style.display = "none";
+        }
+        if (seconds < 0) {
+            window.location.href = "../last_team";
+        } else {
+            window.setTimeout("countdown_v2()", 1000);
+        }
+    }
 
 </script>
 </html>

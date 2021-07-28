@@ -123,6 +123,8 @@
             <a id="instruction_text" class="button" href="/draw/instruction"> How to play </a>
         </div>
     </div>
+    <a href id="v1">version 1</a>
+    <a href id="v2">version 2</a>
 </body>
 <script>
     var url = window.location.href;
@@ -134,5 +136,16 @@
         socket.send("{\"start\" : " + 1 + "}");
         console.log("sent start");
     })
+
+    $("#v1").click(function(){
+        localStorage.setItem("version", "version1");
+        console.log("version 1");
+    })
+
+    $("#v2").click(function(){
+        localStorage.setItem("version", "version2");
+        console.log("version 2");
+    })
+
 </script>
 </html>
