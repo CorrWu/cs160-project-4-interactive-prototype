@@ -58,5 +58,7 @@ urlpatterns = [
     path('t1_guess/', views.t1_guess, name='t1_guess'),
     path('t2_guess/', views.t2_guess, name='t2_guess'),
     path('t3_guess/', views.t3_guess, name='t3_guess'),
-    path('score_phone/', views.score_phone, name='score_phone'),
+    path('score_t1_phone/', views.score_t1_phone, name='score_t1_phone'),
+    path('score_t2_phone/', views.score_t2_phone, name='score_t2_phone'),
+    path('score_t3_phone/', views.score_t3_phone, name='score_t3_phone')
 ]

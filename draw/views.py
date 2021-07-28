@@ -166,6 +166,11 @@ def t2_guess(request):
 def t3_guess(request):
     return render(request, 'draw/t3_guess.html')
 
-def score_phone(request):
-    return render(request, 'draw/score_phone.html')
+def score_t1_phone(request):
+    return render(request, 'draw/score_t1_phone.html')
 
+def score_t2_phone(request):
+    return render(request, 'draw/score_t2_phone.html')
+
+def score_t3_phone(request):
+    return render(request, 'draw/score_t3_phone.html')
