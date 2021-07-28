@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Drawing Team 1 Page</title>
+    <title>Drawing Team 2 Page</title>
 
     <link rel="stylesheet" type="text/css" href="{% static 'draw/vendor/bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Salsa:400">
@@ -22,7 +22,7 @@
     }
 
         /* Team 2 */
-    #t2 {
+        #t2 {
         position: absolute;
         left: 32.62%;
         right: 34.77%;
@@ -107,25 +107,164 @@
         color: #FFFFFF;
     }
 
+    #t1 {
+        position: absolute;
+        left: 0%;
+        right: 67.38%;
+        top: 2.73%;
+        bottom: 85.42%;
+        font-family: Salsa;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 48px;
+        line-height: 59px;
+        display: none;
+        align-items: center;
+        text-align: center;
+        justify-content:center;
+        color: #B1CFF1;
+        z-index: 100;
+    }
+
+
     canvas {
+        position: absolute;
+    }
+
+    #next_team {
         position: relative;
+        top: 300px;
+        text-align: center;
+        background-color: #FFACC0;
+        margin-left: 100px;
+        margin-right: 100px;
+        border-radius: 20px;
+        padding: 10px;
+        font-family: Salsa;
+        font-size: 120px;
+        color: white;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        line-height: 120px;
+        display: none;
+    }
+
+    #t2_comp {
+        position: absolute;
+        width: 304px;
+        height: 91px;
+        left: 360px;
+        top: 21px;
+        z-index: 100;
+        display: none;
+    }
+
+            /* Rectangle 1 */
+            #t2_rec {
+        position: absolute;
+        left: 0%;
+        right: 0.6%;
+        top: 0%;
+        bottom: 0%;
+
+        background: #FFC361;
+        border-radius: 25px;
+    }
+
+        /* Create a room */
+    #t2_text {
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        top: 0%;
+        bottom: 0%;
+
+        font-family: Salsa;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 48px;
+        line-height: 59px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content:center;
+
+        color: #FFFFFF;
+    }
+
+    #t3_comp {
+        position: absolute;
+        width: 305px;
+        height: 91px;
+        left: 690px;
+        top: 21px;
+        z-index: 100;
+        display: none;
+    }
+
+    #t3_rec {
+        position: absolute;
+        left: 0%;
+        right: 0.6%;
+        top: 0%;
+        bottom: 0%;
+
+        background: #24A27C;
+        border-radius: 25px;
+    }
+
+    #t3_text {
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        top: 0%;
+        bottom: 0%;
+
+        font-family: Salsa;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 48px;
+        line-height: 59px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        
+        color: #FFFFFF;
+
     }
 
     </style>
 
 </head>
-<body id="drawing_bg">
+<body>
+<div id="drawing_bg">
     <div id="t1_comp">
         <div id="t1_rec">
             <div id="t1_text"> Team 1 </div>
         </div>
     </div>
+    <div id="t1"> Team 1 </div>
+    <div id="t2_comp">
+        <div id="t2_rec">
+            <div id="t2_text"> Team 2 </div>
+        </div>
+    </div>
     <div id="t2"> Team 2 </div>
     <div id="t3"> Team 3 </div>
+    <div id="t3_comp">
+        <div id="t3_rec">
+            <div id="t3_text"> Team 3 </div>
+        </div>
+    </div>
     <canvas id="myCanvas" width="300px" height="500px" style="margin-left: 320px; margin-right: 0px; margin-top:150px;"></canvas>
+    <div id="next_team">
+        <div id="next_text"> Next Team! <span id="team" style="font-size:70px"> (Team 2) </span> </div>
+    </div>
+</div>
 </body>
 <script>
-// websocket
+
+    // websocket
 
     // setting up the canvas and one paper tool
     var canvas = document.getElementById('myCanvas');
@@ -177,12 +316,42 @@
         console.error('Chat socket closed unexpectedly');
     };
 
-    var seconds = 20;
+    var seconds = 70;
     
     function countdown() {
         seconds = seconds - 1;
+        var canvas_t1 = document.getElementById("drawing_bg");
+        var next_team = document.getElementById("next_team");
+        var t1_comp = document.getElementById("t1_comp");
+        var t2_comp = document.getElementById("t2_comp");
+        var t3_comp = document.getElementById("t3_comp");
+        var t1 = document.getElementById("t1");
+        var team = document.getElementById("team");
+        // 20 seconds: team 1 drawing
+        if (seconds == 50) {
+            next_team.style.display = "block";
+            t2_comp.style.display = "block";
+            t1.style.display = "flex";
+            t1_comp.style.display = "none";
+        }
+        // 5 seconds: next team transition
+        if (seconds == 45) {
+            next_team.style.display = "none";
+        }
+        // 20 seconds: team 2 drawing
+        if (seconds == 25) {
+            team.innerHTML = "(Team 3)";
+            next_team.style.display = "block";
+            t2_comp.style.display = "none";
+            t3_comp.style.display = "block";
+            t1.style.display = "flex";
+        }
+        // 5 seconds: next team transition
+        if (seconds == 20) {
+            next_team.style.display = "none";
+        }
         if (seconds < 0) {
-            window.location.href = "../next_team_t2";
+            window.location.href = "../last_team";
         } else {
             window.setTimeout("countdown()", 1000);
         }

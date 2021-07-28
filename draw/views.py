@@ -19,23 +19,11 @@ def create1(request):
 def create2(request):
     return render(request, 'draw/create2.html')
 
-def drawing1(request):
-    return render(request, 'draw/drawing1.html')
-
-def drawing2(request):
-    return render(request, 'draw/drawing2.html')
-
-def drawing3(request):
-    return render(request, 'draw/drawing3.html')
+def drawing(request):
+    return render(request, 'draw/drawing.html')
 
 def next_team(request):
     return render(request, 'draw/next_team.html')
-
-def next_team_t2(request):
-    return render(request, 'draw/next_team_t2.html')
-
-def next_team_t3(request):
-    return render(request, 'draw/next_team_t3.html')
 
 def times_up_t1(request):
     return render(request, 'draw/times_up_t1.html')
@@ -88,29 +76,62 @@ def last_team(request):
 def score(request):
     return render(request, 'draw/score.html')
 
-def home_phone(request):
-    return render(request, 'draw/home_phone.html')
+def home_t1(request):
+    return render(request, 'draw/home_t1.html')
+
+def home_t2(request):
+    return render(request, 'draw/home_t2.html')
+
+def home_t3(request):
+    return render(request, 'draw/home_t3.html')
 
 def instruction(request):
     return render(request, 'draw/instruction.html')
 
-def instructions_phone(request):
-    return render(request, 'draw/instructions_phone.html')
+def instructions_t1(request):
+    return render(request, 'draw/instructions_t1.html')
 
-def instructions_phone_slide(request):
-    return render(request, 'draw/instructions_phone_slide.html')
+def instructions_t2(request):
+    return render(request, 'draw/instructions_t2.html')
 
-def start_phone(request):
-    return render(request, 'draw/start_phone.html')
+def instructions_t3(request):
+    return render(request, 'draw/instructions_t3.html')
 
-def join_phone(request):
-    return render(request, 'draw/join_phone.html')
+def start_t1(request):
+    return render(request, 'draw/start_t1.html')
 
-def num_players_phone(request):
-    return render(request, 'draw/num_players_phone.html')
+def start_t2(request):
+    return render(request, 'draw/start_t2.html')
 
-def num_teams_phone(request):
-    return render(request, 'draw/num_teams_phone.html')
+def start_t3(request):
+    return render(request, 'draw/start_t3.html')
+
+def join_t1(request):
+    return render(request, 'draw/join_t1.html')
+
+def join_t2(request):
+    return render(request, 'draw/join_t2.html')
+
+def join_t3(request):
+    return render(request, 'draw/join_t3.html')
+
+def num_players_t1(request):
+    return render(request, 'draw/num_players_t1.html')
+
+def num_players_t2(request):
+    return render(request, 'draw/num_players_t2.html')
+
+def num_players_t3(request):
+    return render(request, 'draw/num_players_t3.html')
+
+def num_teams_t1(request):
+    return render(request, 'draw/num_teams_t1.html')
+
+def num_teams_t2(request):
+    return render(request, 'draw/num_teams_t2.html')
+
+def num_teams_t3(request):
+    return render(request, 'draw/num_teams_t3.html')
 
 def word(request):
     return render(request, 'draw/word.html')

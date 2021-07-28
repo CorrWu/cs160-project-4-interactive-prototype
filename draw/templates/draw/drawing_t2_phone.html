@@ -74,6 +74,12 @@ body {
   justify-content: center;
   font-size: 48px;
 }
+
+canvas {
+   position: relative;
+   margin-top: 50px;
+ }
+
     </style>
 
 </head>
@@ -115,7 +121,7 @@ body {
         var received = JSON.parse(receivedMessage.data);
         console.log("Received: " + JSON.stringify(received));
         // You will probably want to add some code here to draw more lines.
-        if (url == 'http://127.0.0.1:8000/draw/drawing1.html') {
+        if (url == 'http://127.0.0.1:8000/draw/drawing2.html') {
             if (uid != received.uid) {
             var point = new paper.Point(received.x, received.y);
             if (!color_map.has(received.uid)) {
